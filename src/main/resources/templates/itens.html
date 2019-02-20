@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+
+<table >
+		<tr>
+            <th>Nome</th>
+            <th>valorl</th>
+            <th>id</th>
+        </tr>
+			 <tr th:each="itens : ${itens}">
+            <td> <span th:text="${itens.nome}"></span> </td>
+            <td> <span th:text="${itens.valor}"></span> </td>
+            <td> <span th:text="${itens.id}"></span> </td>
+     	   </tr>
+     	   
+     	   </table>
+     	   
+     	   <hr>
+     	   
+     	
+			<form action="salvar" method="post">
+			    <div class="form-group">
+			        <label for="nome">Nome Completo</label>
+			        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" />
+			    </div>
+			    <div class="form-group">
+			        <label for="email">Email</label>
+			        <input type="email" class="form-control" id="valor" name="valor" placeholder="Valor" />
+			    </div>
+			    <div class="form-group">
+			        <label for="telefone">Telefone</label>
+			        <input type="text" class="form-control" id="id" name="id" placeholder="id" />
+			    </div>
+			    <button type="submit" class="btn btn-success">Salvar</button>
+			</form>
+       		 </hr>
+       		 
+</body>
+</html>
